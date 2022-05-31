@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Assets/css/index.css" />
+    <title>Awesome Books</title>
+  </head>
+
+  <body>
+    <div class="content">
+      <header>
+        <div class="nav-container">
+          <h2 class="logo">
+            <span class="logo-1">Awesome</span>
+            <span class="logo-2">Books</span>
+          </h2>
+          <nav>
+            <ul>
+              <li id="list" class="navBtn active">List</li>
+              <li id="add" class="navBtn">Add</li>
+              <li id="contact" class="navBtn">Contact</li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="showDate">Month Day , Year Time</div>
+        <section id="show-books">
+          <h1>All awesome books!</h1>
+          <div class="books"></div>
+        </section>
+        <section id="add-new-book" class="add">
+          <div class="add-book">
+            <h2>Add a new Book</h2>
+            <form action="#" id="add-book">
+              <input type="text" placeholder="Title" id="title" required />
+              <input type="text" placeholder="Author" id="autor" required />
+              <button type="submit">Add Book</button>
+            </form>
+          </div>
+        </section>
+        <section id="contact-us" class="contact">
+          <h2>Contact Information</h2>
+          <p>Do have any questions, or you just want to say "Hello"?</p>
+          <p>You can reach out to us</p>
+          <ul>
+            <li>Email : r.m.darik@gmail.com, orizut@gmail.com</li>
+            <li>Phone Number : +251925106658, +08066572582</li>
+            <li>Address : Ethiopia, Nigeria</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <footer>Copyright @ 2022 by Microverse</footer>
+    <script type="module" src="Assets/JavaScript/index.js"></script>
+  </body>
+</html>
