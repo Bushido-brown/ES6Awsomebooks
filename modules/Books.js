@@ -36,6 +36,7 @@ export default class Books {
       this.#SetBooksList(bookRemoved);
       this.showBooks();
     }
+    
   };
 
   showBooks = () => {

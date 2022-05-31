@@ -1,6 +1,6 @@
 import Nav from '../../modules/Nav.js';
 import Books from '../../modules/Books.js';
-import { DateTime } from '../../node_modules/luxon/src/luxon.js';
+import { DateTime } from '../../modules/src/luxon.js';
 
 const awesomeBooks = new Books();
 const form = document.querySelector('#add-book');
@@ -23,8 +23,8 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-const remove = (index) => {
-  awesomeBooks.deleteCollection(index);
+const remove = (Index) => {
+  awesomeBooks.deleteCollection(Index);
 };
 navMenu.forEach((nav) => {
   nav.addEventListener('click', () => {
@@ -36,7 +36,7 @@ awesomeBooks.showBooks();
 const removeButton = document.querySelectorAll('button.removebtn');
 removeButton.forEach((btn) => {
   btn.addEventListener('click', () => {
-    remove(btn.dataset.index);
+    remove(btn.dataset.Index);
   });
 });
 const twoDigits = (num) => {

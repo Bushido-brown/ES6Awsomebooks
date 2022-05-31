@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Awesome-Books
+# Awesome-Books ES6
 
 > Build a basic website that allows users to add/remove books from a list.
 
@@ -16,11 +16,12 @@
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple example steps:
+clone the repository to your local machine
 
 ### Prerequisites
 
-### Setup
+### clone the repository to your local machine
 
 ### Install
 
