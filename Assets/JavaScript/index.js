@@ -26,7 +26,6 @@ form.addEventListener('submit', (event) => {
 const remove = (index) => {
   awesomeBooks.deleteCollection(index);
 };
-
 navMenu.forEach((nav) => {
   nav.addEventListener('click', () => {
     Nav (nav.getAttribute('id'));

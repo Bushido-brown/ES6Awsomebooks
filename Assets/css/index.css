@@ -55,7 +55,7 @@ ul {
 }
 
 .logo-2 {
-  color: #ff0000;
+  color: #f00;
   font-size: 16px;
 }
 
@@ -69,7 +69,7 @@ ul {
   padding-bottom: 10rem;
 }
 
-#add-new-book {
+#add-new-book h2 {
   text-align: center;
   margin-top: 5rem;
 }
@@ -125,6 +125,10 @@ button {
   cursor: pointer;
 }
 
+form button {
+  align-self: flex-end;
+}
+
 button:hover {
   background-color: #fff;
   color: #fa602f;
@@ -157,10 +161,6 @@ form input {
   padding: 0.5rem;
   width: 20rem;
   border-radius: 10px;
-}
-
-form button {
-  align-self: flex-end;
 }
 
 #contact-us {
