@@ -4,11 +4,11 @@ export default class Books {
   }
 
   #SetBooksList = (books) => {
-    localStorage.setItem("Books", JSON.stringify(books));
+    localStorage.setItem('Books', JSON.stringify(books));
   };
 
   #getBooksList = () => {
-    const books = JSON.parse(localStorage.getItem("Books"));
+    const books = JSON.parse(localStorage.getItem('Books'));
     if (books) {
       return books;
     }
@@ -19,8 +19,8 @@ export default class Books {
     this.booksList = this.#getBooksList();
     this.booksList.push(bookValues);
     this.#SetBooksList(this.booksList);
-    document.querySelector("#add-new-book").style.display = "none";
-    document.querySelector("#show-books").style.display = "flex";
+    document.querySelector('#add-new-book').style.display = 'none';
+    document.querySelector('#show-books').style.display = 'flex';
   };
 
   deleteCollection = (bookIndex) => {
@@ -40,14 +40,14 @@ export default class Books {
 
   showBooks = () => {
     const books = this.#getBooksList();
-    const htmlbooks = document.querySelector(".books");
-    htmlbooks.innerHTML = "";
+    const htmlbooks = document.querySelector('.books');
+    htmlbooks.innerHTML = '';
     for (let i = 0; i < books.length; i += 1) {
       htmlbooks.innerHTML += `
-          <div class="book">
-          <h3>"${books[i].title}"</h3>
-          <p><span class="by-span"> By </span> ${books[i].autor}</p>
-          <button type="button" data-index="${i}" class='removebtn'>Remove</button>
+          <div class='book'>
+          <h3>'${books[i].title}'</h3>
+          <p><span class='by-span'> By </span> ${books[i].autor}</p>
+          <button type='button' data-index='${i}' class='removebtn'>Remove</button>
           `;
     }
   };
