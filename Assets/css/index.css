@@ -1,23 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Monda:wght@400;700&family=Roboto&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Monda", "Roboto", sans-serif;
 }
+
 body {
   background-color: #fcfafa;
 }
+
 .content {
   min-height: calc(100vh - 5rem);
 }
+
 header {
   position: fixed;
   top: 0;
   background-color: #000472;
-  color: #ffffff;
+  color: #fff;
   width: 100%;
   z-index: 1;
 }
+
 ul {
   list-style: none;
   cursor: pointer;
@@ -26,6 +31,7 @@ ul {
 .active {
   color: #ff7600;
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -33,21 +39,26 @@ ul {
   align-items: center;
   min-height: 100%;
 }
+
 .nav-container nav ul {
   display: flex;
   gap: 1.5rem;
   font-size: 16px;
 }
+
 .logo {
   font-size: 20px;
 }
+
 .logo-1 {
   color: #ff7600;
 }
+
 .logo-2 {
   color: #ff0000;
   font-size: 16px;
 }
+
 #show-books {
   display: flex;
   flex-direction: column;
@@ -62,6 +73,7 @@ ul {
   text-align: center;
   margin-top: 5rem;
 }
+
 .books {
   display: flex;
   flex-direction: column;
@@ -81,6 +93,7 @@ ul {
   transition: 0.8s;
   font-size: 18px;
 }
+
 .book:hover {
   transform: scale(1.02);
 }
@@ -90,23 +103,22 @@ ul {
   color: #fcfafa;
   margin-right: 1.5rem;
 }
-/* .book1 {
-  background-color: #a09c9c;
-} */
+
 button.removebtn {
   margin-left: auto;
   background-color: #000472;
-  color: #ffffff;
+  color: #fff;
 }
+
 button.removebtn:hover {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #000472;
 }
 
 button {
   padding: 0.3rem 1rem;
   background-color: #fa602f;
-  color: #ffffff;
+  color: #fff;
   border-radius: 15px;
   border: #000 1px solid;
   transition: 0.8s;
@@ -114,13 +126,15 @@ button {
 }
 
 button:hover {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #fa602f;
 }
+
 #add-new-book {
   display: none;
   justify-content: center;
 }
+
 .add-book {
   display: flex;
   flex-direction: column;
@@ -158,11 +172,12 @@ form button {
   justify-content: center;
   gap: 1rem;
 }
+
 footer {
   /* bottom: 0; */
   margin-top: -5rem;
   background-color: #000472;
-  color: #ffffff;
+  color: #fff;
   width: 100%;
   justify-content: center;
   text-align: center;

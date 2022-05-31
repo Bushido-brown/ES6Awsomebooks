@@ -1,35 +1,34 @@
 export default class Books {
-    constructor() {
-      this.booksList = [];
-    }
-  
-    #SetBooksList = (books) => {
-      localStorage.setItem("Books", JSON.stringify(books));
+ constructor() {
+   this.booksList = [];
+  }
+
+  #SetBooksList = (books) => {
+    localStorage.setItem('Books', JSON.stringify(books));
     };
-  
-    #getBooksList = () => {
-      const books = JSON.parse(localStorage.getItem("Books"));
+
+  #getBooksList = () => {
+    const books = JSON.parse(localStorage.getItem('Books'));
       if (books) {
         return books;
       }
       return [];
     };
   
-    newCollection = (bookValues) => {
-      this.booksList = this.#getBooksList();
-      this.booksList.push(bookValues);
-      this.#SetBooksList(this.booksList);
-      document.querySelector('#add-new-book').style.display = 'none';
-      document.querySelector('#show-books').style.display = 'flex';
+  newCollection = (bookValues) => {
+    this.booksList = this.#getBooksList();
+    this.booksList.push(bookValues);
+    this.#SetBooksList(this.booksList);
+    document.querySelector('#add-new-book').style.display = 'none';
+    document.querySelector('#show-books').style.display = 'flex';
     };
   
-    deleteCollection = (bookIndex) => {
-        let bookRemoved;
+  deleteCollection = (bookIndex) => {
+    let bookRemoved;
       if (bookIndex !== null) {
-        const books = this.#getBooksList();
-  
-        bookRemoved = books.filter((_item, key) => {
-          if (key === parseInt (bookIndex, 10)) {
+    const books = this.#getBooksList();
+      bookRemoved = books.filter((_item, key) => {
+       if (key === parseInt (bookIndex, 10)) {
             return null;
           }
           return true;
@@ -39,9 +38,9 @@ export default class Books {
       }
     };
 
-    showBooks = () => {
-        const books = this.#getBooksList();
-        const htmlbooks = document.querySelector(".books");
+  showBooks = () => {
+    const books = this.#getBooksList();
+    const htmlbooks = document.querySelector(".books");
         htmlbooks.innerHTML = '';
         for (let i = 0; i < books.length; i += 1) {
           htmlbooks.innerHTML += `

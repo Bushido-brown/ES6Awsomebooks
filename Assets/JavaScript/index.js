@@ -1,12 +1,10 @@
-import Nav from "../../modules/Nav.js";
-import Books from "../../modules/Books.js";
+import Nav from '../../modules/Nav.js';
+import Books from '../../modules/Books.js';
 import { DateTime } from '../../node_modules/luxon/src/luxon.js';
-
 
 const awesomeBooks = new Books();
 const form = document.querySelector('#add-book');
 const navMenu = document.querySelectorAll('.navBtn');
-console.log(navMenu)
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -31,16 +29,13 @@ const remove = (index) => {
 
 navMenu.forEach((nav) => {
   nav.addEventListener('click', () => {
-    console.log('click')
     Nav (nav.getAttribute('id'));
   });
 });
 
 remove(-1);
 awesomeBooks.showBooks();
-
 const removeButton = document.querySelectorAll('button.removebtn');
-
 removeButton.forEach((btn) => {
   btn.addEventListener('click', () => {
     remove(btn.dataset.index);
@@ -58,5 +53,3 @@ setInterval(() => {
   }:${twoDigits(now.minute)}:${twoDigits(now.second)} hrs.`;
   document.querySelector('.showDate').innerHTML = showDate;
 }, 1000);
-
-
