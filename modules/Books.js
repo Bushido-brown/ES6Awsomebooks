@@ -30,10 +30,10 @@ export default class Books {
     for (let i = 0; i < books.length; i += 1) {
       const wrapper = document.createElement('div');
       const info = document.createElement('p');
-      const button = document.createElement('button')
+      const button = document.createElement('button');
       htmlbooks.appendChild(wrapper);
-      wrapper.append(info)
-      wrapper.appendChild(button)
+      wrapper.append(info);
+      wrapper.appendChild(button);
 
       info.textContent = `${books[i].title} authored by  ${books[i].autor}`;
       button.textContent ='remove';
@@ -46,6 +46,6 @@ export default class Books {
     allBooks.splice(evt.currentTarget.getAttribute('data'), 1);
     this.showBooks(allBooks);
     this.#SetBooksList(allBooks);
-    console.log('click')
+    console.log('click');
   }
 }
