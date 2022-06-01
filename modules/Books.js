@@ -28,9 +28,9 @@ export default class Books {
     const htmlbooks = document.querySelector('.books');
     htmlbooks.innerHTML = '';
     for (let i = 0; i < books.length; i += 1) {
-     const wrapper = document.createElement('div');
-     const info = document.createElement('p');
-     const button = document.createElement('button')
+      const wrapper = document.createElement('div');
+      const info = document.createElement('p');
+      const button = document.createElement('button')
         htmlbooks.appendChild(wrapper);
         wrapper.append(info)
         wrapper.appendChild(button)
