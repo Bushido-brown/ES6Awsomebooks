@@ -36,16 +36,16 @@ export default class Books {
       wrapper.appendChild(button);
 
       info.textContent = `${books[i].title} authored by  ${books[i].autor}`;
-      button.textContent ='remove';
+      button.textContent = 'remove';
       button.addEventListener('click', this.deleteButton.bind(this));
       button.setAttribute('data', i);
     }
   };
-  deleteButton = (evt)=>{  
+
+  deleteButton = (evt) => {  
     const allBooks = this.#getBooksList();
     allBooks.splice(evt.currentTarget.getAttribute('data'), 1);
     this.showBooks(allBooks);
     this.#SetBooksList(allBooks);
-    console.log('click');
   }
 }
