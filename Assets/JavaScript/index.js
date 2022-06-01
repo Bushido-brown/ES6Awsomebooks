@@ -7,7 +7,6 @@ const form = document.querySelector('#add-book');
 const navMenu = document.querySelectorAll('.navBtn');
 const date = document.querySelector('.date');
 
-
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const bookTitle = document.querySelector('#title');

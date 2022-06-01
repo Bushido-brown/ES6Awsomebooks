@@ -28,11 +28,9 @@ export default class Books {
     const htmlbooks = document.querySelector('.books');
     htmlbooks.innerHTML = '';
     for (let i = 0; i < books.length; i += 1) {
-        const wrapper = document.createElement('div');
-        const info = document.createElement('p');
-        
-        const button = document.createElement('button')
-
+     const wrapper = document.createElement('div');
+     const info = document.createElement('p');
+     const button = document.createElement('button')
         htmlbooks.appendChild(wrapper);
         wrapper.append(info)
         wrapper.appendChild(button)
@@ -41,13 +39,9 @@ export default class Books {
         button.textContent ='remove';
         button.addEventListener('click', this.deleteButton.bind(this));
         button.setAttribute('data', i);
-        
-
-
     }
   };
-  deleteButton = (evt)=>{
-    
+  deleteButton = (evt)=>{  
     const allBooks = this.#getBooksList();
     allBooks.splice(evt.currentTarget.getAttribute('data'), 1);
     this.showBooks(allBooks);
