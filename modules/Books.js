@@ -42,7 +42,7 @@ export default class Books {
     }
   };
 
-  deleteButton = (evt) => {  
+  deleteButton = (evt) => {
     const allBooks = this.#getBooksList();
     allBooks.splice(evt.currentTarget.getAttribute('data'), 1);
     this.showBooks(allBooks);
