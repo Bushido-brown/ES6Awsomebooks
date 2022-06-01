@@ -31,14 +31,14 @@ export default class Books {
       const wrapper = document.createElement('div');
       const info = document.createElement('p');
       const button = document.createElement('button')
-        htmlbooks.appendChild(wrapper);
-        wrapper.append(info)
-        wrapper.appendChild(button)
+       htmlbooks.appendChild(wrapper);
+       wrapper.append(info)
+       wrapper.appendChild(button)
 
-        info.textContent = `${books[i].title} authored by  ${books[i].autor}`;
-        button.textContent ='remove';
-        button.addEventListener('click', this.deleteButton.bind(this));
-        button.setAttribute('data', i);
+       info.textContent = `${books[i].title} authored by  ${books[i].autor}`;
+       button.textContent ='remove';
+       button.addEventListener('click', this.deleteButton.bind(this));
+       button.setAttribute('data', i);
     }
   };
   deleteButton = (evt)=>{  
